@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaInstagram } from "react-icons/fa";
 import { IoCallOutline } from "react-icons/io5";
-import './Navbar.css'
+import './navbar.css'
 
 function Navbar() {
   return (
