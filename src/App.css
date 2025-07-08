@@ -1,0 +1,101 @@
+@import url(https://fonts.googleapis.com/css2?family=Krona+One&display=swap);
+
+.card{
+    width: 620px;
+    height: 480px;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    padding: 7px 10px;
+    display: flex;
+    gap: 12px;
+}
+
+.card-img{
+    width: 320px;
+    height: 450px;
+    border-radius: 12px;
+    object-fit: cover; 
+}
+
+.button-card{
+    width: 190px;
+    height: 40px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -5%;
+    border-radius: 24px;
+    background-color: #FFC865;
+    font-family: 'Krona One', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: auto;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.card-icon{
+    width: 20px;
+    height: 20px;
+    border-radius: 22px;
+    background-color: #fff;
+    padding: 3px;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 500px) {
+    .cards .card{
+        margin-top: 100px;
+    }
+
+    .card-img{
+        height: 300px;
+    }
+
+    .card{
+        width: 400px;
+        height: 800px;
+        flex-direction: column;
+        /* align-items: center; */
+    }
+
+    .card-content{
+        height: 350px;
+        display: flex;
+        gap: 4px;
+    }
+
+    .card-info{
+    
+        text-align: center;
+    }
+
+    .card-age{
+        text-align: center;
+    }
+
+    .card-tetle{
+        text-align: center;
+    }
+
+    .card-job{
+        text-align: center;
+    }
+
+    .card-age-wrapper{
+        padding: 10px 100px;
+    }
+
+    .wrapper-content{
+       margin: 0px 80px;
+    }
+
+    .card-wrapper{
+        margin: auto;
+    }
+    .button-card{
+        margin: 0px 0px 40px 80px ;
+    }
+}
