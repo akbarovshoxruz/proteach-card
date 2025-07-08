@@ -27,7 +27,7 @@ const database = getDatabase(app);
 
 const App = () => {
   const [GetArray, setGetArray] = useState([]);
-  const [Loader, setLoader] = useState(false)
+  const [Loader, setLoader] = useState(true)
 
 
   useEffect(() => {
@@ -40,19 +40,10 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    const handleLoad = () => {
-      setLoader(true);
-      setTimeout(() => {
-        setLoader(false);
-      }, 10800); // 2 soniya kutish
-    };
+    const loader = setTimeout(() => {
+      setLoader(false);
+    }, 10800); // 2 soniya kutish
 
-    window.addEventListener("load", handleLoad);
-
-    // Tozalash (component unmount bo‘lganda)
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
   }, []);
 
 
