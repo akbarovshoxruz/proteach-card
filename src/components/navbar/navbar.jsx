@@ -5,7 +5,7 @@ import './navbar.css'
 
 function Navbar() {
   return (
-    <navbar className={'navbar w-full max-w-[1200px] m-auto flex items-center justify-between pt-[30px]'}>
+    <navbar className={'navbar w-full max-w-[1480px] m-auto flex items-center justify-between pt-[30px]'}>
         <div>
             <img src="/Frame.png" alt="" />
         </div>

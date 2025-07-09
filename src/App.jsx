@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getDatabase, ref, onValue } from "firebase/database";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Navbar from "./components/navbar/navbar";
 import Hero from "./components/hero/Hero";
 import { CiLocationOn } from "react-icons/ci";
@@ -28,6 +28,7 @@ const database = getDatabase(app);
 const App = () => {
   const [GetArray, setGetArray] = useState([]);
   const [Loader, setLoader] = useState(true)
+  const cardSectionRef = useRef(null)
 
 
   useEffect(() => {
@@ -54,7 +55,7 @@ const App = () => {
       }
       <div>
         <Navbar />
-        <Hero />
+        <Hero scrollToRef={cardSectionRef}/>
         <h1 className="text-center pt-20 text-3xl font-semibold text-[#000000]">-BITIRUVCHILAR-</h1>
 
         <div className="flex flex-col w-full items-center px-4 py-5 pt-10">
@@ -65,7 +66,7 @@ const App = () => {
                   key={index}
                   className={`w-full sm:w-[620px] ${index % 2 === 0 ? "self-start" : "self-end"} mb-10 shadow-xl rounded-xl`}
                 >
-                  <div className="flex flex-col sm:flex-row w-full sm:w-[620px] border border-[#E8E8E8] rounded-[12px] p-3 gap-3">
+                  <div ref={cardSectionRef} className="flex flex-col sm:flex-row w-full sm:w-[620px] border border-[#E8E8E8] rounded-[12px] p-3 gap-3">
                     <img
                       className="w-full sm:w-[320px] h-[300px] sm:h-[450px] object-cover rounded-[12px]"
                       src="/proteach.png"
