@@ -29,6 +29,7 @@ const App = () => {
   const [GetArray, setGetArray] = useState([]);
   const [Loader, setLoader] = useState(true)
   const cardSectionRef = useRef(null)
+  const cardSectionRefLink = useRef(null)
 
 
   useEffect(() => {
@@ -56,20 +57,21 @@ const App = () => {
       <div>
         <Navbar />
         <Hero scrollToRef={cardSectionRef}/>
-        <h1 className="text-center pt-20 text-3xl font-semibold text-[#000000]">-BITIRUVCHILAR-</h1>
+        <h1 id="natija" className="text-center pt-20 text-3xl font-semibold text-[#000000]">-BITIRUVCHILAR-</h1>
 
         <div className="flex flex-col w-full items-center px-4 py-5 pt-10">
           {
             GetArray.length > 0 ? (
-              GetArray.map((item, index) => (
+              GetArray.sort((a, b) => a.id - b.id)
+              .map((item, index) => (
                 <div
                   key={index}
                   className={`w-full sm:w-[620px] ${index % 2 === 0 ? "self-start" : "self-end"} mb-10 shadow-xl rounded-xl`}
                 >
-                  <div ref={cardSectionRef} className="flex flex-col sm:flex-row w-full sm:w-[620px] border border-[#E8E8E8] rounded-[12px] p-3 gap-3">
+                  <div ref={cardSectionRef } className="flex flex-col sm:flex-row w-full sm:w-[620px] border border-[#E8E8E8] rounded-[12px] p-3 gap-3">
                     <img
                       className="w-full sm:w-[320px] h-[300px] sm:h-[450px] object-cover rounded-[12px]"
-                      src="/proteach.png"
+                      src={item.image}
                       alt="User"
                     />
                     <div className="flex flex-col text-center justify-between w-full">

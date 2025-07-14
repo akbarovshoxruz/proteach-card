@@ -3,7 +3,14 @@ import { FaInstagram } from "react-icons/fa";
 import { IoCallOutline } from "react-icons/io5";
 import './navbar.css'
 
-function Navbar() {
+function Navbar({scrollToRef}) {
+
+    const handleScrollLink = () => {
+        if (scrollToRef && scrollToRef.current) {
+          scrollToRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+
   return (
     <navbar className={'navbar w-full max-w-[1480px] m-auto flex items-center justify-between pt-[30px]'}>
         <div>
@@ -14,7 +21,7 @@ function Navbar() {
                     <a className='text-xl hover:text-[#000]' href="#">Bosh sahifa</a>
                 </li>
                 <li>
-                    <a className='text-xl hover:text-[#000]' href="#">Natijalar</a>
+                    <a className='text-xl hover:text-[#000]' href="#" onClick={handleScrollLink}>Natijalar</a>
                 </li>
                 <li>
                     <a className='text-xl hover:text-[#000]' href="#">Kurslar</a>
