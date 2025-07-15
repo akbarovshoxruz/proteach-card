@@ -67,7 +67,7 @@ const App = () => {
                 .map((item, index) => (
                   <div
                     key={index}
-                    className={`w-full sm:w-[620px] ${index % 2 === 0 ? "self-start" : "self-end"} mb-10 `}
+                    className={`w-full sm:w-[620px] ${index % 2 === 0 ? "self-start ml-[40px]" : "self-end"} mb-10 `}
                   >
                     <div ref={cardSectionRef} className="flex flex-col sm:flex-row w-full max-w-[550px] sm:w-[620px] border border-[#E8E8E8] rounded-[12px] p-3 gap-3">
                       <img
