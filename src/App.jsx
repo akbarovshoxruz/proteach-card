@@ -4,11 +4,11 @@ import { getDatabase, ref, onValue } from "firebase/database";
 import { useState, useEffect, useRef } from "react";
 import Navbar from "./components/navbar/navbar";
 import Hero from "./components/hero/Hero";
-import { CiLocationOn } from "react-icons/ci";
 import { MdMonetizationOn } from "react-icons/md";
 import { FaArrowUp } from "react-icons/fa6";
 import { TbTargetArrow } from "react-icons/tb";
 import { FaLocationDot } from "react-icons/fa6";
+import { HiMiniCalendarDateRange } from "react-icons/hi2";
 import FullScreenLoader from "./components/loader/loader";
 
 const firebaseConfig = {
@@ -69,9 +69,9 @@ const App = () => {
                     key={index}
                     className={`w-full sm:w-[620px] ${index % 2 === 0 ? "self-start ml-[40px]" : "self-end"} mb-10 `}
                   >
-                    <div ref={cardSectionRef} className="flex flex-col sm:flex-row w-full max-w-[550px] sm:w-[620px] border border-[#E8E8E8] rounded-[12px] p-3 gap-3">
+                    <div ref={cardSectionRef} className="flex flex-col sm:flex-row w-full max-w-[550px] h-[520px] sm:w-[620px] border border-[#E8E8E8] rounded-[12px] p-3 gap-3">
                       <img
-                        className="w-full max-w-[280px] sm:w-[320px] h-[280px] sm:h-[450px] object-cover rounded-[12px]"
+                        className="w-full max-w-[280px] sm:w-[320px]sm:h-[450px] object-cover rounded-[12px]"
                         src={item.image}
                         alt="User"
                       />
@@ -90,21 +90,27 @@ const App = () => {
 
                           <div className="mt-4 space-y-2 text-left sm:text-left sm:px-0 px-4">
                             <div className="flex items-center gap-2">
-                              <FaLocationDot  className="text-[20px]"/>
+                              <FaLocationDot className="text-[20px]" />
                               <h1 className="text-[16px] font-normal">
                                 Ish Joyi: <span className="font-bold">{item.workplace}</span>
                               </h1>
                             </div>
                             <div className="flex items-center gap-2">
-                              <MdMonetizationOn   className="text-[20px]"/>
+                              <MdMonetizationOn className="text-[20px]" />
                               <h1>
                                 Daromadi: <span className="font-bold">{item.price}</span>
                               </h1>
                             </div>
                             <div className="flex items-center gap-2">
-                              <TbTargetArrow   className="text-[18px]"/>
+                              <TbTargetArrow className="text-[18px]" />
                               <h1>
                                 Ishga kirdi: <span className="font-bold">{item.eddedData}</span>
+                              </h1>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <HiMiniCalendarDateRange className="text-[20px]" />
+                              <h1 className="text-[16px] font-normal">
+                                Ishga joylashgan sana: <span className="font-bold">{item.Dateofemployment}</span>
                               </h1>
                             </div>
                           </div>
