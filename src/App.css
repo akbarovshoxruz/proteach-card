@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css2?family=Krona+One&display=swap);
 
+html {
+    scroll-behavior: smooth !important;
+}
+
 .card{
     width: 620px;
     height: 480px;
