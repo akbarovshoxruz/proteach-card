@@ -42,19 +42,39 @@ const App = () => {
     });
   }, []);
 
-  useEffect(() => {
-    const loader = setTimeout(() => {
-      setLoader(false);
-    }, 10800); // 2 soniya kutish
+  const [progress, setProgress] = useState(0);
+  const [dataLoaded, setDataLoaded] = useState(false);
+  const [data, setData] = useState([]);
 
+  useEffect(() => {
+    const db = getDatabase();
+    const dataRef = ref(database, 'Users'); // <- shu yerga to‘g‘ri path yozing
+
+    setProgress(20); // boshlanishda progress 20%
+
+    onValue(dataRef, (snapshot) => {
+      setProgress(60); // ma’lumot kelayotganida
+
+      const val = snapshot.val();
+
+      if (val) {
+        setProgress(100); // ma’lumot muvaffaqiyatli keldi
+        setData(Object.entries(val));
+        setTimeout(() => setDataLoaded(true), 300); // animatsiya chiqsin
+      } else {
+        setProgress(100); // bo‘sh bo‘lsa ham, yuklangan
+        setTimeout(() => setDataLoaded(true), 300);
+      }
+    }, {
+      onlyOnce: true // faqat bir marta o‘qilsin
+    });
   }, []);
+
+  if (!dataLoaded) return <FullScreenLoader progress={progress} />;
 
 
   return (
     <>
-      {
-        Loader ? <FullScreenLoader /> : ""
-      }
       <div>
         <Navbar />
         <Hero scrollToRef={cardSectionRef} />
@@ -91,26 +111,26 @@ const App = () => {
                           <div className="mt-4 space-y-2 text-left sm:text-left sm:px-0 px-4">
                             <div className="flex items-center gap-2">
                               <FaLocationDot className="text-[20px]" />
-                              <h1 className="text-[16px] font-normal">
-                                Ish Joyi: <span className="font-bold">{item.workplace}</span>
+                              <h1 className="text-[16px] font-bold">
+                                Ish Joyi: <span className="font-normal">{item.workplace}</span>
                               </h1>
                             </div>
                             <div className="flex items-center gap-2">
                               <MdMonetizationOn className="text-[20px]" />
-                              <h1>
-                                Daromadi: <span className="font-bold">{item.price}</span>
+                              <h1 className="font-bold">
+                                Daromadi: <span className="font-normal">{item.price}</span>
                               </h1>
                             </div>
                             <div className="flex items-center gap-2">
                               <TbTargetArrow className="text-[18px]" />
-                              <h1>
-                                Ishga kirdi: <span className="font-bold">{item.eddedData}</span>
+                              <h1 className="font-bold">
+                                Ishga kirdi: <span className="font-normal">{item.eddedData}</span>
                               </h1>
                             </div>
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-start gap-2">
                               <HiMiniCalendarDateRange className="text-[20px]" />
-                              <h1 className="text-[16px] font-normal">
-                                Ishga joylashgan sana: <span className="font-bold">{item.Dateofemployment}</span>
+                              <h1 className="text-[16px] font-bold">
+                                Malumot olingan sana: <span className="font-normal">{item.Dateofemployment}</span>
                               </h1>
                             </div>
                           </div>
