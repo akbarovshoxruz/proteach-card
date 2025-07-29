@@ -13,6 +13,7 @@ import FullScreenLoader from "./components/loader/loader";
 import { FaInstagram } from "react-icons/fa";
 import { IoCallOutline } from "react-icons/io5";
 import { PiArrowDownRightBold } from "react-icons/pi";
+import ParticlesBackground from "./ParticlesBackground";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCmB2bXTAyxXVEvumcTE97RpYKMKu94LBA",
@@ -34,7 +35,6 @@ const App = () => {
   const [Loader, setLoader] = useState(true)
   const cardSectionRef = useRef(null)
   const cardSectionRefLink = useRef(null)
-
 
   useEffect(() => {
     const ArrayRef = ref(database, "Users");
@@ -80,7 +80,6 @@ const App = () => {
     <html className="scroll-smooth">
       <head></head>
       <body>
-
         <div>
           <navbar className={'navbar w-full max-w-[1480px] m-auto flex items-center justify-between pt-[30px]'}>
             <div>
@@ -106,22 +105,25 @@ const App = () => {
               </span>
             </div>
           </navbar>
+
           <div className='hero w-full max-w-[1500px] m-auto text-center mt-[50px]'>
             <h4 className='hero-title'>Zamonaviy kasblarni professionallardan o’rganing</h4>
             <h1 className='hero-text'>Nazariy emas, amaliy natija- <br />O‘quvchilarimiz allaqachon <br /> <span className='text-[#FBA406]'><i>daromadga</i> </span> chiqqan!</h1>
             <p className='hero-info'>O‘quvchilarimiz oyiga o’rtacha 300$+ daromad qilishmoqda!</p>
             <button className='button-hero'><a href="#natija">Natijalarni ko‘rish </a><PiArrowDownRightBold className='hero-icon' /></button>
           </div>
-          <h1 id="natija" className="text-center pt-20 text-3xl font-semibold text-[#000000]">-BITIRUVCHILAR-</h1>
 
-          <div className="flex flex-col w-full items-center px-4 py-5 pt-10">
+
+          <div className="flex flex-col w-full items-center px-4 py-5 pt-10 relative">
+            <h1 id="natija" className="z-20 text-center pt-20 text-3xl font-semibold text-[#000000]">-BITIRUVCHILAR-</h1>
+            <ParticlesBackground />
             {
               GetArray.length > 0 ? (
                 GetArray.sort((a, b) => a.id - b.id)
                   .map((item, index) => (
                     <div
                       key={index}
-                      className={`w-full sm:w-[620px] ${index % 2 === 0 ? "self-start ml-[40px]" : "self-end"} mb-10 `}
+                      className={`w-full sm:w-[620px] ${index % 2 === 0 ? "self-start ml-[40px]" : "self-end"} mb-10 z-20`}
                     >
                       <div ref={cardSectionRef} className="flex flex-col sm:flex-row w-full max-w-[550px] h-[520px] sm:w-[620px] border border-[#E8E8E8] rounded-[12px] p-3 gap-3">
                         <img
@@ -131,10 +133,10 @@ const App = () => {
                         />
                         <div className="flex flex-col text-center justify-between w-full max-w-[280px]">
                           <div className="flex flex-col gap-1 sm:h-[360px] h-auto mt-3 sm:mt-0 px-2">
-                            <h2 className="text-2xl font-semibold capitalize">{item.name}</h2>
+                            <h2 className="text-2xl mt-6 font-semibold capitalize">{item.name}</h2>
 
-                            <span className="flex gap-2 justify-center text-[16px] pt-[10px]">
-                              <h3><i>{item.age} yosh</i></h3> /
+                            <span className="flex gap-2 justify-center text-[17px] pt-[16px]">
+                              <h3 className=""><i>{item.age} yosh</i></h3> /
                               <h3><i>{item.job}</i></h3>
                             </span>
 
@@ -144,26 +146,26 @@ const App = () => {
 
                             <div className="mt-4 space-y-2 text-left sm:text-left sm:px-0 px-4">
                               <div className="flex items-center gap-2">
-                                <FaLocationDot className="text-[20px]" />
-                                <h1 className="text-[16px] font-bold">
+                                <FaLocationDot className="text-[20px] flex self-start" />
+                                <h1 className="text-[16px] font-bold leading-5">
                                   Ish Joyi: <span className="font-normal">{item.workplace}</span>
                                 </h1>
                               </div>
-                              <div className="flex items-center gap-2">
-                                <MdMonetizationOn className="text-[20px]" />
+                              <div className="flex items-center gap-2 pt-2">
+                                <MdMonetizationOn className="text-[20px]  flex self-start" />
                                 <h1 className="font-bold">
                                   Daromadi: <span className="font-normal">{item.price}</span>
                                 </h1>
                               </div>
-                              <div className="flex items-center gap-2">
-                                <TbTargetArrow className="text-[18px]" />
+                              <div className="flex items-center gap-2 pt-2">
+                                <TbTargetArrow className="text-[18px]  flex self-start" />
                                 <h1 className="font-bold">
                                   Ishga kirdi: <span className="font-normal">{item.eddedData}</span>
                                 </h1>
                               </div>
-                              <div className="flex items-start gap-2">
-                                <HiMiniCalendarDateRange className="text-[20px]" />
-                                <h1 className="text-[16px] font-bold">
+                              <div className="flex items-start gap-2 pt-2">
+                                <HiMiniCalendarDateRange className="text-[26px]  flex self-start" />
+                                <h1 className="text-[16px] font-bold  leading-6">
                                   Ma'lumot olingan sana: <span className="font-normal">{item.Dateofemployment}</span>
                                 </h1>
                               </div>
