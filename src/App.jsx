@@ -115,7 +115,7 @@ const App = () => {
 
 
           <div className="flex flex-col w-full items-center px-4 py-5 pt-10 relative">
-            <h1 id="natija" className="z-20 text-center pt-20 text-3xl font-semibold text-[#000000]">-BITIRUVCHILAR-</h1>
+            <h1 id="natija" className="z-20 text-center pb-[50px] text-3xl font-semibold text-[#000000] mb-[100px]">-BITIRUVCHILAR-</h1>
             <ParticlesBackground />
             {
               GetArray.length > 0 ? (
@@ -123,9 +123,13 @@ const App = () => {
                   .map((item, index) => (
                     <div
                       key={index}
-                      className={`w-full sm:w-[620px] ${index % 2 === 0 ? "self-start ml-[40px]" : "self-end"} mb-10 z-20`}
+                      className={`w-full sm:w-[620px] ${index % 2 === 0 ? "self-start ml-[40px]" : "self-end"} -mt-[100px] z-20`}
                     >
-                      <div ref={cardSectionRef} className="flex flex-col sm:flex-row w-full max-w-[550px] h-[520px] sm:w-[620px] border border-[#E8E8E8] rounded-[12px] p-3 gap-3">
+                      <div ref={cardSectionRef}  className="flex flex-col sm:flex-row w-full max-w-[550px] h-[520px] sm:w-[620px] shadow-lg rounded-xl bg-white p-3 gap-3"
+                        style={{
+                          border: "2px solid #E5E5E5",
+                        }}
+                      >
                         <img
                           className="w-full max-w-[280px] sm:w-[320px]sm:h-[450px] object-cover rounded-[12px]"
                           src={item.image}

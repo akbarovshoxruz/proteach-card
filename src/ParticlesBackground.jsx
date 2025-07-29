@@ -4,12 +4,13 @@ function ParticlesBackground() {
   useEffect(() => {
     const script = document.createElement("script");
     const script2 = document.createElement("script");
-    script.src = "../public/particles.min.js";
     script2.src = "./js/app.js";
+    script.src = "/particles.min.js";
     script.onload = () => {
-      window.particlesJS.load("particles-js", "../puclic/particles.json", () => {
+      window.particlesJS.load("particles-js", "/particles.json", () => {
         console.log("Particles yuklandi!");
       });
+      document.body.appendChild(script2)
     };
     document.body.appendChild(script);
   }, []);
