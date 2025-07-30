@@ -30,11 +30,10 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const database = getDatabase(app);
 
-const App = () => {
+const App = () => {     
   const [GetArray, setGetArray] = useState([]);
-  const [Loader, setLoader] = useState(true)
   const cardSectionRef = useRef(null)
-  const cardSectionRefLink = useRef(null)
+
 
   useEffect(() => {
     const ArrayRef = ref(database, "Users");

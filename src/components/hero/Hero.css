@@ -207,37 +207,37 @@
   }
 
   .hero-title {
-    width: 90%;
-    font-size: 12px;
+    width: 80%;
+    font-size: 13px;
     line-height: 20px;
-    padding: 5px 8px;
+    padding: 5px 5px;
     margin-bottom: 16px;
   }
 
   .hero-text {
-    font-size: 30px;
+    font-size: 28px;
     line-height: 38px;
     padding-top: 20px;
   }
 
   .hero-info {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 26px;
     margin-bottom: 80px;
-    padding: 0 12px;
+    padding: 0 px;
   }
 
   .button-hero {
-    width: 200px;
-    height: 44px;
-    font-size: 12px;
+    width: 170px;
+    height: 38px;
+    font-size: 11px;
     line-height: 30px;
     gap: 8px;
   }
 
   .hero-icon {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 18px;
     padding: 2px;
   }
 }
