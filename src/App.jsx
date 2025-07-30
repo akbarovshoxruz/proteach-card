@@ -106,13 +106,15 @@ const App = () => {
             </div>
           </navbar>
 
-          <div className='hero  w-[1400px] m-auto text-center'>
-            <h4 className='hero-title giest'>Zamonaviy kasblarni professionallardan o’rganing</h4>
-            <h1 className='hero-text montserrat'>Nazariy emas, amaliy natija- <br />O‘quvchilarimiz allaqachon <br /> <span className='text-[#FBA406] font-semibold'><i>daromadga</i> </span> chiqqan!</h1>
-            <p className='hero-info poppins'>O‘quvchilarimiz oyiga o’rtacha 300$+ daromad qilishmoqda!</p>
-            <a href="#natija">
-              <button className='button-hero'>Natijalarni ko‘rish <PiArrowDownRightBold className='hero-icon' /></button>
-            </a>
+          <div className="container">
+            <div className='hero'>
+              <h4 className='hero-title giest'>Zamonaviy kasblarni professionallardan o’rganing</h4>
+              <h1 className='hero-text montserrat'>Nazariy emas, amaliy natija- <br />O‘quvchilarimiz allaqachon <br /> <span className='text-[#FBA406] font-semibold'><i>daromadga</i> </span> chiqqan!</h1>
+              <p className='hero-info poppins'>O‘quvchilarimiz oyiga o’rtacha 300$+ daromad qilishmoqda!</p>
+              <a href="#natija">
+                <button className='button-hero'>Natijalarni ko‘rish <PiArrowDownRightBold className='hero-icon' /></button>
+              </a>
+            </div>
           </div>
 
 
@@ -127,13 +129,13 @@ const App = () => {
                       key={index}
                       className={`w-full sm:w-[620px] ${index % 2 === 0 ? "self-start ml-[40px]" : "self-end"} -mt-[100px] z-20`}
                     >
-                      <div ref={cardSectionRef} className="flex flex-col sm:flex-row w-full max-w-[550px] h-[520px] sm:w-[620px] shadow-lg rounded-xl bg-white p-3 gap-3"
+                      <div ref={cardSectionRef} className="flex flex-col sm:flex-row w-full max-w-[550px] sm:h-[520px] sm:w-[620px] shadow-lg rounded-xl bg-white p-3 gap-3"
                         style={{
                           border: "2px solid #E5E5E5",
                         }}
                       >
                         <img
-                          className="w-full max-w-[280px] sm:w-[320px]sm:h-[450px] object-cover rounded-[12px]"
+                          className="w-full max-w-[280px]  sm:w-[320px]sm:h-[450px] object-cover rounded-[12px]"
                           src={item.image}
                           alt="User"
                         />
@@ -190,6 +192,7 @@ const App = () => {
               )
             }
           </div>
+
         </div>
       </body>
     </html>
