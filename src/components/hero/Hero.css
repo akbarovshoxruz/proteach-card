@@ -1,23 +1,23 @@
 @import url(https://fonts.googleapis.com/css2?family=Krona+One&display=swap);
 .hero{
     height: 614px;
-    background: linear-gradient(#e2d2b2c8,#f7f7f7), url(/public/hero-bg.png) no-repeat center center / cover;
+    background: linear-gradient(#f3eee5c8,#f8f7f7), url(/public/hero-bg.png) no-repeat center center / cover;
     padding-top: 80px;
     border-top: 3px solid #FFC865;
-    border-left: 3px solid #FFC865;
-    border-right: 3px solid #FFC865;
+    border-left: 3px solid #ffc96580;
+    border-right: 3px solid #ffc96580;
     border-radius: 10px;
 }
 
 .hero-title{
     width: 460px;
-    height: 40px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 32px;
     color: #000;
     border: 1px solid #adaaaa;
     border-radius: 20px;
+    padding: 4px 6px 6px 6px;
     margin: auto;
 }
 
@@ -33,7 +33,7 @@
     font-weight: 400;
     line-height: 32px;
     padding-top: 22px;
-    color: #191919;
+    color: #717070;
     margin-bottom: 170px;
 }
 
@@ -68,7 +68,7 @@
     .hero-title{
         width: 350px;
         height: 36px;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 400;
         line-height: 32px;
         color: #000;

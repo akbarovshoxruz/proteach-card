@@ -13,6 +13,7 @@ import FullScreenLoader from "./components/loader/loader";
 import { FaInstagram } from "react-icons/fa";
 import { IoCallOutline } from "react-icons/io5";
 import { PiArrowDownRightBold } from "react-icons/pi";
+import { RxArrowTopRight } from "react-icons/rx";
 import ParticlesBackground from "./ParticlesBackground";
 
 const firebaseConfig = {
@@ -81,11 +82,11 @@ const App = () => {
       <head></head>
       <body>
         <div>
-          <navbar className={'navbar w-full max-w-[1480px] m-auto flex items-center justify-between pt-[30px]'}>
+          <navbar className={'navbar p-5 mt-3 w-11/12 poppins m-auto flex items-center justify-between border-[3px] border-[#F7F7F7] rounded-2xl'}>
             <div>
-              <img src="/Frame.png" alt="" />
+              <h2 className="text-[#FBA406] font-semibold text-xl krona">PRO <span className="text-[#000]">TEACH</span></h2>
             </div>
-            <ul className='flex items-center gap-[20px] text-[#717070] '>
+            <ul className='flex items-center gap-6 greyText '>
               <li>
                 <a className='text-xl hover:text-[#000]' href="#">Bosh sahifa</a>
               </li>
@@ -106,16 +107,18 @@ const App = () => {
             </div>
           </navbar>
 
-          <div className='hero w-full max-w-[1500px] m-auto text-center mt-[50px]'>
-            <h4 className='hero-title'>Zamonaviy kasblarni professionallardan o’rganing</h4>
-            <h1 className='hero-text'>Nazariy emas, amaliy natija- <br />O‘quvchilarimiz allaqachon <br /> <span className='text-[#FBA406]'><i>daromadga</i> </span> chiqqan!</h1>
-            <p className='hero-info'>O‘quvchilarimiz oyiga o’rtacha 300$+ daromad qilishmoqda!</p>
-            <button className='button-hero'><a href="#natija">Natijalarni ko‘rish </a><PiArrowDownRightBold className='hero-icon' /></button>
+          <div className='hero  w-[1400px] max-w-[1500px] m-auto text-center mt-[50px]'>
+            <h4 className='hero-title giest'>Zamonaviy kasblarni professionallardan o’rganing</h4>
+            <h1 className='hero-text montserrat'>Nazariy emas, amaliy natija- <br />O‘quvchilarimiz allaqachon <br /> <span className='text-[#FBA406] font-semibold'><i>daromadga</i> </span> chiqqan!</h1>
+            <p className='hero-info poppins'>O‘quvchilarimiz oyiga o’rtacha 300$+ daromad qilishmoqda!</p>
+            <a href="#natija">
+            <button className='button-hero'>Natijalarni ko‘rish <PiArrowDownRightBold className='hero-icon' /></button>
+            </a>
           </div>
 
 
           <div className="flex flex-col w-full items-center px-4 py-5 pt-10 relative">
-            <h1 id="natija" className="z-20 text-center pb-[50px] text-3xl font-semibold text-[#000000] mb-[100px]">-BITIRUVCHILAR-</h1>
+            <h1 id="natija" className="z-20 text-center pb-[50px] text-3xl font-medium text-[#000000] mb-[100px] krona">-BITIRUVCHILAR-</h1>
             <ParticlesBackground />
             {
               GetArray.length > 0 ? (
@@ -137,47 +140,47 @@ const App = () => {
                         />
                         <div className="flex flex-col text-center justify-between w-full max-w-[280px]">
                           <div className="flex flex-col gap-1 sm:h-[360px] h-auto mt-3 sm:mt-0 px-2">
-                            <h2 className="text-2xl mt-6 font-semibold capitalize">{item.name}</h2>
+                            <h2 className="text-2xl mt-6 font-semibold capitalize montserrat">{item.name}</h2>
 
-                            <span className="flex gap-2 justify-center text-[17px] pt-[16px]">
-                              <h3 className=""><i>{item.age} yosh</i></h3> /
-                              <h3><i>{item.job}</i></h3>
+                            <span className="flex gap-2 justify-center text-[17px] pt-[16px] italic montserrat">
+                              <h3 className="">{item.age} yosh | {" "}
+                              {item.job}</h3>
                             </span>
 
-                            <p className="text-center sm:text-left break-words whitespace-pre-line text-[#717070]">
+                            <p className="text-center sm:text-left break-words whitespace-pre-line text-[#717070] montserrat">
                               {item.discription}
                             </p>
 
                             <div className="mt-4 space-y-2 text-left sm:text-left sm:px-0 px-4">
                               <div className="flex items-center gap-2">
                                 <FaLocationDot className="text-[20px] flex self-start" />
-                                <h1 className="text-[16px] font-bold leading-5">
+                                <h1 className="text-[16px] font-bold leading-5 montserrat">
                                   Ish Joyi: <span className="font-normal">{item.workplace}</span>
                                 </h1>
                               </div>
                               <div className="flex items-center gap-2 pt-2">
                                 <MdMonetizationOn className="text-[20px]  flex self-start" />
-                                <h1 className="font-bold">
+                                <h1 className="font-bold montserrat">
                                   Daromadi: <span className="font-normal">{item.price}</span>
                                 </h1>
                               </div>
                               <div className="flex items-center gap-2 pt-2">
                                 <TbTargetArrow className="text-[18px]  flex self-start" />
-                                <h1 className="font-bold">
+                                <h1 className="font-bold montserrat">
                                   Ishga kirdi: <span className="font-normal">{item.eddedData}</span>
                                 </h1>
                               </div>
                               <div className="flex items-start gap-2 pt-2">
                                 <HiMiniCalendarDateRange className="text-[26px]  flex self-start" />
-                                <h1 className="text-[16px] font-bold  leading-6">
+                                <h1 className="text-[16px] font-bold  leading-6 montserrat">
                                   Ma'lumot olingan sana: <span className="font-normal">{item.Dateofemployment}</span>
                                 </h1>
                               </div>
                             </div>
                           </div>
 
-                          <button className="w-[190px] h-[40px] text-[13px] font-normal leading-[32px] rounded-[24px] bg-[#FFC865] font-['Krona_One'] flex items-center justify-center gap-2 mt-6 mx-auto cursor-pointer">
-                            Bog’lanish <FaArrowUp className="w-[20px] h-[20px] bg-white p-[3px] text-[12px] rounded-full" />
+                          <button className="w-[190px] h-[40px] text-[13px] font-normal leading-[32px] rounded-[24px] bg-[#FFC865] font-['Krona_One'] flex items-center justify-center gap-2 mt-6 mx-auto cursor-pointer krona">
+                            Bog’lanish <RxArrowTopRight className="w-5 h-5 bg-white p-[2px] text-[12px] rounded-full" />
                           </button>
                         </div>
                       </div>
