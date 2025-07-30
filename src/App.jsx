@@ -5,7 +5,6 @@ import { useState, useEffect, useRef } from "react";
 import Navbar from "./components/navbar/navbar";
 import Hero from "./components/hero/Hero";
 import { MdMonetizationOn } from "react-icons/md";
-import { FaArrowUp } from "react-icons/fa6";
 import { TbTargetArrow } from "react-icons/tb";
 import { FaLocationDot } from "react-icons/fa6";
 import { HiMiniCalendarDateRange } from "react-icons/hi2";
@@ -107,12 +106,12 @@ const App = () => {
             </div>
           </navbar>
 
-          <div className='hero  w-[1400px] max-w-[1500px] m-auto text-center mt-[50px]'>
+          <div className='hero  w-[1400px] m-auto text-center'>
             <h4 className='hero-title giest'>Zamonaviy kasblarni professionallardan o’rganing</h4>
             <h1 className='hero-text montserrat'>Nazariy emas, amaliy natija- <br />O‘quvchilarimiz allaqachon <br /> <span className='text-[#FBA406] font-semibold'><i>daromadga</i> </span> chiqqan!</h1>
             <p className='hero-info poppins'>O‘quvchilarimiz oyiga o’rtacha 300$+ daromad qilishmoqda!</p>
             <a href="#natija">
-            <button className='button-hero'>Natijalarni ko‘rish <PiArrowDownRightBold className='hero-icon' /></button>
+              <button className='button-hero'>Natijalarni ko‘rish <PiArrowDownRightBold className='hero-icon' /></button>
             </a>
           </div>
 
@@ -128,7 +127,7 @@ const App = () => {
                       key={index}
                       className={`w-full sm:w-[620px] ${index % 2 === 0 ? "self-start ml-[40px]" : "self-end"} -mt-[100px] z-20`}
                     >
-                      <div ref={cardSectionRef}  className="flex flex-col sm:flex-row w-full max-w-[550px] h-[520px] sm:w-[620px] shadow-lg rounded-xl bg-white p-3 gap-3"
+                      <div ref={cardSectionRef} className="flex flex-col sm:flex-row w-full max-w-[550px] h-[520px] sm:w-[620px] shadow-lg rounded-xl bg-white p-3 gap-3"
                         style={{
                           border: "2px solid #E5E5E5",
                         }}
@@ -144,7 +143,7 @@ const App = () => {
 
                             <span className="flex gap-2 justify-center text-[17px] pt-[16px] italic montserrat">
                               <h3 className="">{item.age} yosh | {" "}
-                              {item.job}</h3>
+                                {item.job}</h3>
                             </span>
 
                             <p className="text-center sm:text-left break-words whitespace-pre-line text-[#717070] montserrat">
