@@ -166,7 +166,7 @@ const App = () => {
                               </div>
                               <div className="flex items-center gap-2 pt-2">
                                 <TbTargetArrow className="text-[18px]  flex self-start" />
-                                <h1 className="font-bold montserrat">
+                                <h1 className="font-bold montserrat leading-5">
                                   Ishga kirdi: <span className="font-normal">{item.eddedData}</span>
                                 </h1>
                               </div>
