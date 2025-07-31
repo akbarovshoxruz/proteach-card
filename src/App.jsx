@@ -127,7 +127,7 @@ const App = () => {
                     <div
                       key={index}
                       // className={`w-full max-sm:w-[300px] ${index % 2 === 0 ? "self-start ml-[40px]" : "self-end  max-sm:mr-14"}   z-20`}
-                      className={`w-full sm:w-[620px] max-sm:w-[300px] ${index % 2 === 0 ? "self-start ml-[40px]" : "self-end  max-sm:mr-14"} -mt-[100px] max-sm:mt-4 z-20`}
+                      className={`w-full sm:w-[620px] max-sm:w-[300px] ${index % 2 === 0 ? "self-start ml-[40px] max-sm:ml-10" : "self-end  max-sm:mr-16"} -mt-[100px] max-sm:mt-4 z-20`}
                     >
                       <div ref={cardSectionRef} className="flex flex-col sm:flex-row w-full max-w-[550px] max-sm:mt-10 sm:h-[520px] sm:w-[620px] shadow-lg rounded-xl bg-white p-3 gap-3"
                         style={{
