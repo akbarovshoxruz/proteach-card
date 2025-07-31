@@ -115,10 +115,10 @@ const App = () => {
               </a>
             </div>
           </div>
-
+       
 
           <div className="flex flex-col w-full items-center px-4 py-5 pt-10 relative">
-            <h1 id="natija" className="z-20 text-center pb-[50px] text-3xl font-medium text-[#000000] mb-[100px] krona">-BITIRUVCHILAR-</h1>
+            <h1 id="natija" className="z-20 text-center pb-[50px] text-3xl font-medium text-[#000000] max-sm:mb-[0px] mb-[100px] krona">-BITIRUVCHILAR-</h1>
             <ParticlesBackground />
             {
               GetArray.length > 0 ? (
@@ -126,9 +126,10 @@ const App = () => {
                   .map((item, index) => (
                     <div
                       key={index}
-                      className={`w-full sm:w-[620px] ${index % 2 === 0 ? "self-start ml-[40px]" : "self-end"} -mt-[100px] z-20`}
+                      // className={`w-full max-sm:w-[300px] ${index % 2 === 0 ? "self-start ml-[40px]" : "self-end  max-sm:mr-14"}   z-20`}
+                      className={`w-full sm:w-[620px] max-sm:w-[300px] ${index % 2 === 0 ? "self-start ml-[40px]" : "self-end  max-sm:mr-14"} -mt-[100px] max-sm:mt-4 z-20`}
                     >
-                      <div ref={cardSectionRef} className="flex flex-col sm:flex-row w-full max-w-[550px] sm:h-[520px] sm:w-[620px] shadow-lg rounded-xl bg-white p-3 gap-3"
+                      <div ref={cardSectionRef} className="flex flex-col sm:flex-row w-full max-w-[550px] max-sm:mt-10 sm:h-[520px] sm:w-[620px] shadow-lg rounded-xl bg-white p-3 gap-3"
                         style={{
                           border: "2px solid #E5E5E5",
                         }}
