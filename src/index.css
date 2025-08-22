@@ -5,32 +5,23 @@
 /* @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Krona+One&display=swap); */
 
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Krona+One&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=M+PLUS+Rounded+1c&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sen:wght@400..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap');
-
-.giest{
-  font-family: "Geist", sans-serif;
-}
 
 .montserrat{
   font-family: 'Montserrat', sans-serif;
 }
 
-.krona{
-  font-family: 'Krona One', sans-serif;
+.monospace{
+  font-family: monospace;
 }
 
-.poppins {
-  font-family: 'Poppins', sans-serif;
-}
-.greyText {
-  color:#717070;
+.sans-serif {
+  font-family: sans-serif;
 }
 
-
-
+.text-shadow {
+  text-shadow: 2px 0.5px rgba(0, 0, 0, 0.2);
+}
 
 /* =============================================================================
    HTML5 CSS Reset Minified - Eric Meyer
