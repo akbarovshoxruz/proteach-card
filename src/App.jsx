@@ -92,12 +92,12 @@ const App = () => {
       <body>
         <div>
           <navbar className={'navbar p-5 mt-3 w-11/12 m-auto flex items-center justify-between border-[3px] border-[#F7F7F7] rounded-2xl'}>
-            <div>
+            <a href="https://proteach-card-fbvx.vercel.app">
               <h2 className="text-[#FBA406] font-bold text-2xl monospace flex gap-2 items-center tracking-wider">
                 PRO
                 <span className="text-[#000]">TEACH</span>
               </h2>
-            </div>
+            </a>
             <ul className='flex items-center gap-6 greyText '>
               <li>
                 <a className='text-xl hover:text-[#000] transition-all' href="#">Bosh sahifa</a>
